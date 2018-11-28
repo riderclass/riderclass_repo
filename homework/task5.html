@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+.numblock p {
+	display: inline;
+}
+</style>
+<body>
+	<div class="numblock">X : <p id="iks"></p></div>
+	<div class="numblock">Y : <p id="igr"></p></div>
+	<div class="numblock">Z : <p id="zed"></p></div>
+<div>Среди трех данных целых чисел есть хоть одна пара совпадающих</div>
+<div>Результат: <div id="result"></div></div>
+<button id="reload">Попробовать снова</button>
+</body>
+
+
+
+<script>
+
+var x = prompt('Введите x'),
+	y = prompt('Введите y'),
+	z = prompt('Введите z'),
+	button = document.getElementById('reload'),
+	phrase = 'Среди трех данных целых чисел есть хоть одна пара совпадающих';
+
+document.getElementById('iks').innerHTML = x;
+document.getElementById('igr').innerHTML = y;
+document.getElementById('zed').innerHTML = z;
+
+button.addEventListener('click', function() {
+		location.reload();
+			});
+
+if (x == y || x == z || y == z) {
+	alert('true')
+	phrase = true;
+	document.getElementById('result').innerHTML = phrase;
+} else {alert('false')
+phrase = false;
+document.getElementById('result').innerHTML = phrase;
+}
+</script>
+
+</html>

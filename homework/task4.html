@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+
+<script>
+var mynumber = prompt('Введите число от -999 до 999');
+var myresult = numCheck(mynumber);
+
+function numCheck(mynumber) {
+  return (Math.log10((mynumber ^ (mynumber >> 31)) - (mynumber >> 31)) | 0) + 1;
+}
+
+//Для положительных чисел
+
+if (mynumber > 0 && myresult == 1) {
+	alert('Положительное однозначное число');
+	location.reload();
+} else {
+	if (mynumber > 0 && myresult == 2) {
+	alert('Положительное двузначное число');
+	location.reload();
+} else {
+	if (mynumber > 0 && myresult == 3) {
+	alert('Положительное трехзначное число');
+	location.reload();
+}
+}
+};
+
+//Для отрицательных чисел
+
+if (mynumber < 0 && myresult == 1) {
+	alert('Отрицательное однозначное число');
+	location.reload();
+} else {
+	if (mynumber < 0 && myresult == 2) {
+	alert('Отрицательное двузначное число');
+	location.reload();
+} else {
+	if (mynumber < 0 && myresult == 3) {
+	alert('Отрицательное трехзначное число');
+	location.reload();
+}
+}
+};
+
+//Для нулевого значения 
+if (mynumber == 0 ) {
+	alert('Нулевое значение');
+	location.reload();
+} else {};
+
+//Для значений вне диапозона
+if (mynumber < -999 || mynumber > 999 ) {
+	alert('Неверное значение');
+	location.reload();
+} else {};
+
+</script>
+
+</html>
