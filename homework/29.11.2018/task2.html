@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+
+		var x1 = +prompt('Введите x1'),
+			y1 = +prompt('Введите y1'),
+			z1 = +prompt('Введите z1'),
+			x2 = +prompt('Введите x2'),
+			y2 = +prompt('Введите y2'),
+			z2 = +prompt('Введите z2'),
+			x3 = +prompt('Введите x3'),
+			y3 = +prompt('Введите y3'),
+			z3 = +prompt('Введите z3'),
+			a,
+			b,
+			c;
+
+		a = Math.sqrt(Math.pow(x2-x1,2) + Math.pow(y2-y1,2) + Math.pow(z2-z1,2));
+		b = Math.sqrt(Math.pow(x3-x2,2) + Math.pow(y3-y2,2) + Math.pow(z3-z2,2));
+		c = Math.sqrt(Math.pow(x3-x1,2) + Math.pow(y3-y1,2) + Math.pow(z3-z1,2));
+        
+		console.log(a);
+		console.log(b);
+		console.log(c);
+
+	   if (a == Math.sqrt(Math.pow(b,2) + Math.pow(c,2)) || b == Math.sqrt(Math.pow(a,2) + Math.pow(c,2)) || c == Math.sqrt(Math.pow(b,2) + Math.pow(a,2))) {
+	   alert ('Является');
+	   } 
+	   else {
+	   alert('Нет');
+	   }
+
+//Для проверки
+//Является: 000 030 600
+//Не является: 000 250 300
+	</script>
+
+</body>
+</html>
