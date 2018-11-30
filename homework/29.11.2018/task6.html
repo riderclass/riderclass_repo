@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+			
+		var year = +prompt('Введите год для проверки'),
+		result1 = year/100,
+		result2 = year/4,
+		result3 = year/400;
+
+				if (result1 % 1 == 0) {
+					result1 = true;
+				} else if (result1 % 1 !== 0) {
+					result1 = false;
+				}
+
+				if (result2 % 1 == 0) {
+					result2 = true;
+				} else if (result2 % 1 !== 0) {
+					result2 = false;
+				}
+
+				if (result3 % 1 == 0) {
+					result3 = true;
+				} else if (result3 % 1 !== 0) {
+					result3 = false;
+				}
+
+				if (result2 == true && result1 == false) {
+					alert('Да, этот год високосный'); location.reload();
+				} else if (result1 == true && result3 == true) {
+					alert('Да, этот год високосный'); location.reload();
+				} else if (result1 == true) {
+					alert('Нет, не високосный'); location.reload();
+				} else {alert('Нет, не високосный'); location.reload();}
+
+	</script>
+
+</body>
+</html>

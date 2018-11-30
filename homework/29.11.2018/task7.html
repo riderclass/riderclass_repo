@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+			var x = +prompt('Введите количество тарелок'),
+				y = +prompt('Введите количество средства'),
+				z = 0,
+				ost = 0;
+
+				while (y > 0) {
+					y = y - 0.5;
+					z++
+				}
+		
+				d = x - z;
+				ost = -d*0.5
+		
+				if (d > 0) {
+					alert ('Средство закончилось, тарелок осталось ' + d);
+				} else if (d == 0) {
+					alert('Все тарелки вымыты, моющее средство закончилось');
+				} else if (d < 0) {
+					alert('Все тарелки вымыты. Моющего средства осталось ' + ost);
+				}
+
+	</script>
+
+</body>
+</html>

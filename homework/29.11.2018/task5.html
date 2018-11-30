@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+			
+			var palin = prompt('Введите вашу строку'),
+				nilap;
+
+			function reverseMyString(str) {
+  			return str.split("").reverse().join("");
+			}
+
+			nilap = reverseMyString(palin).toLowerCase().replace(/\s/g, '');
+			alert(nilap);
+
+			if (palin.toLowerCase().replace(/\s/g, '') === nilap) {
+				alert('Они совпадают!');
+			} else {alert('Не совпадают!');};
+
+	</script>
+
+</body>
+</html>

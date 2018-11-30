@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+
+		var x = +prompt('Введите X'),
+			y = +prompt('Введите Y');
+
+		if (y < x) {
+
+		[x, y] = [y, x];
+
+		alert('Значение X = ' + x);
+		alert('Значение Y = ' + y);
+
+		} else if (x == y) {
+		alert('они равны');
+
+		} else {
+		alert('Значение X = ' + x);
+		alert('Значение Y = ' + y);
+		};
+
+	</script>
+
+</body>
+</html>
