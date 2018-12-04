@@ -9,17 +9,19 @@
 	<script>
 
 		var pass = prompt('Введите пароль'),
-			reg1 = /\d{2}/,
+			reg1 = /[0-9]+/,
 			reg2 = /[a-z]/,
 			reg3 = /[A-Z]/,
-			reg4 = /[\[\\\^\$\.\|\?\*\+\(\)]{1}/;
+			reg4 = /[\[\\\^\$\.\|\?\*\+\(\)\!]{1}/,
+			x;
 
 		reg1.test(pass);
 		reg2.test(pass);
 		reg3.test(pass);
 		reg4.test(pass);
+		x = pass.match(reg1).index;
 
-		if (reg1.test(pass) == true && reg2.test(pass) == true && reg3.test(pass) == true && reg4.test(pass) == true && pass.length >=9) {alert('Пароль что надо');
+		if (reg1.test(pass) == true && reg2.test(pass) == true && reg3.test(pass) == true && reg4.test(pass) == true && pass.length >=9 && x >= 3) {alert('Пароль что надо');
 		} else {alert ('Слабоват, попробуй еще раз');};
 
 	</script>
