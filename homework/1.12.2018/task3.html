@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		var str = prompt('Введите строку'),
+			sym = prompt('Введите символ'),
+			reg1 = new RegExp('' + sym + '', 'ig'),
+			i = 0,
+			str2,
+			x;
+
+		if (str.match(reg1) == null) {
+			alert('Символ не найден');
+			location.reload();
+		}
+
+		x = str.match(reg1);
+		y = x.length;
+
+		while (i < y) {
+			str2 = str.split(sym).join(sym+sym); 
+			i++
+		};
+
+		alert('Результат с удвоенным символом: ' + str2);
+
+	</script>
+</body>
+</html>

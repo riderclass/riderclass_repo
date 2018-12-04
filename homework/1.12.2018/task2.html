@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var str = prompt('Введите число'),
+			regexp = /\d/ig,
+			y,
+			sum = 0,
+			arr;
+
+		arr = str.match(regexp);
+        function arraySum(arr) {
+        	for(var i = 0; i < arr.length; i++){
+        		sum += Number.parseInt(arr[i]);}
+        	console.log(sum);
+        }
+        arraySum(arr);
+		alert('Сумма чисел строки = ' + sum);
+	</script>
+</body>
+</html>

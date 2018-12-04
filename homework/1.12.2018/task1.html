@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		var kredit = +prompt('Введите размер ипотечного кредита'),
+			procent = +prompt('Введите процентную ставку в год'),
+			srok = +prompt('Введите количество лет'),
+			month,
+			result,
+			pereplata,
+			pereplataFixed;
+
+		//Расчет месячной ставки
+		month = (procent / 12) / 100;
+
+		//Расчет ежемесячного платежа
+		result = kredit*(month * (Math.pow(1 + month, srok * 12))) / (Math.pow(1 + month, srok * 12) - 1);
+
+		//Расчет переплаты
+		pereplata = 12*(result*srok) - kredit;
+
+		//Округление
+		pereplataFixed = pereplata.toFixed();
+		Number.parseInt(pereplataFixed)
+		alert('Сумма переплаты: '+ pereplataFixed);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<script>
+
+		var pass = prompt('Введите пароль'),
+			reg1 = /\d{2}/,
+			reg2 = /[a-z]/,
+			reg3 = /[A-Z]/,
+			reg4 = /[\[\\\^\$\.\|\?\*\+\(\)]{1}/;
+
+		reg1.test(pass);
+		reg2.test(pass);
+		reg3.test(pass);
+		reg4.test(pass);
+
+		if (reg1.test(pass) == true && reg2.test(pass) == true && reg3.test(pass) == true && reg4.test(pass) == true && pass.length >=9) {alert('Пароль что надо');
+		} else {alert ('Слабоват, попробуй еще раз');};
+
+	</script>
+</body>
+</html>
