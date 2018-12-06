@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<script>
+	document.write('<table border="1" width="300px" height="300px" align="center"><tr><td align="center"><div class="field"></div></td><td align="center"><div class="field"></div></td><td align="center"><div class="field">3</div></td></tr><tr><td align="center"><div class="field"></div></td><td align="center"><div class="field"></div></td><td align="center"><div class="field"></div></td></tr><tr><td align="center"><div class="field"></div></td><td align="center"><div class="field"></div></td><td align="center"><div class="field"></div></td></tr></table>')
+
+	let area = [ 1, null, 0, null, 1, null, null, null, null ],
+		len = area.length;
+		x = document.getElementsByClassName('field');
+
+	for (i = 0; i<len; i++) {
+		if (area[i] == 0) {
+			x[i].innerHTML="0";
+		} else if (area[i] == 1) {
+			x[i].innerHTML="x";
+		} else if (area[i] == null) {
+			x[i].innerHTML=" ";
+		}
+	}
+
+</script>
+	
+</body>
+</html>
