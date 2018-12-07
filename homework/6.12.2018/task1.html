@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<style>
+	button {
+		margin: 10% 0 0 40%;
+		display: block;
+		width:200px;
+		height:80px;
+		top:30%;
+	}
+</style>
+<button onclick="return func(stud);">Вызвать функцию</button>
+<script>
+var stud = {
+	name: 'Вася',
+	surname: 'Иванов',
+		interests: [{
+			mathematic: true,
+			biology: true,
+			web_developing: false
+		}],
+	edu_location: 'ITMO'
+	};
+
+function func(stud) { 
+    var str = ""; 
+    for(param in stud) { 
+        str += param + ": " + stud[param]+"\n"; 
+    } 
+	console.log(str); 
+	} 
+</script>
+</body>
+</html>

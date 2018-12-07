@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+<script>
+var dateNow = new Date(),
+    nydate = new Date(2019, 0, 1, 0, 0, 0, 0),
+    last;
+
+function counter() {
+    var result = (nydate - dateNow);
+    var minutes = Math.floor((result/1000/60)%60);
+    var hours = Math.floor((result/1000/60/60)%24);
+    var days = Math.floor(result/1000/60/60/24);
+//Минуты
+    if (minutes == 1) minutes = '0' + minutes + ' минута ';
+    if (minutes == 21 || minutes == 31 || minutes == 41 || minutes == 51) minutes = minutes + ' минута ';
+    if (minutes > 1 && minutes <= 4) minutes = '0' + minutes + ' минуты ';
+    if (minutes > 1 && minutes <= 4 || minutes > 21 && minutes < 25 || minutes > 31 && minutes < 35 || minutes > 41 && minutes < 45 || minutes > 51 && minutes < 55) minutes = minutes + ' минуты ';
+    if (minutes == 0 || minutes > 4 && minutes < 10) minutes = '0' + minutes + ' минут ';
+    if (minutes > 9 && minutes <= 20 || minutes > 24 && minutes <= 30 || minutes > 34 && minutes <= 40 || minutes > 44 && minutes <= 50 || minutes > 54) minutes = minutes + ' минут ';
+//Часы
+    if (hours == 0 || hours > 4 && hours < 10) hours = '0' + hours + ' часов ';
+    if (hours > 24 && hours < 31 || hours > 34 && hours < 41 || hours > 44 && hours < 51) hours = hours + ' часов ';
+    if (hours > 1 && hours <= 4) hours = '0' + hours + ' часа ';
+    if (hours > 21 && hours < 25 || hours > 31 && hours < 35 || hours > 41 && hours < 45 || hours > 51 && hours < 55) hours = '0' + hours + ' часа ';
+    if (hours == 1) hours = '0' + hours + ' час ';
+    if (hours == 21 || hours == 31 || hours == 41 || hours == 51) hours = hours + ' час ';
+//Дни
+	if (days == 0 || days > 4 && days < 10) days = '0' + days + ' дней ';
+	if (days > 9 && days <= 20 || days > 24 && days <= 30 || days > 34 && days <= 40 || days > 44 && days <=50 || days > 50) days = days + ' дней ';
+	if (days == 1) days = '0' + days + ' день ';
+	if (days == 1 || days == 21 || days == 31 || days == 41 || days == 51) days = days + ' день ';
+	if (days > 1 && days <= 4) days = '0' + days + ' дня ';
+	if (days > 21 && days <=24 || days > 32 && days <=34 || days > 42 && days <=44 || days > 52 && days <=54) days = days + ' дня ';
+//Вывод результата
+last = 'до Нового Года: ' + days + hours + minutes;
+alert(last);
+}
+window.onload = function() {
+counter();
+}
+</script>
+</body>
+</html>

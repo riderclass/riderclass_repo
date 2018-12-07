@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<style>
+	button {
+		margin: 10% 0 0 40%;
+		display: block;
+		width:200px;
+		height:80px;
+		top:30%;
+	}
+</style>
+<button onclick="return fibo(n);">Показать</button>
+<script>
+var n = prompt('Введите число Fibonacci'),
+	fibonacci = [0, 1]; 
+function fibo(n) {	
+	for (i = 2; i < n; i ++) {
+		fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];
+		}
+alert(fibonacci.slice(0,n));
+}
+</script>
+</body>
+</html>
