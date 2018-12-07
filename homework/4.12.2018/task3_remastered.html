@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let A = [12,1,4,3,40,10,200],
+            min = A[0],
+            max = A[0];
+        alert(A);
+        for (let i = 0; i < A.length; i++) {
+            if (min > A[i]) {
+                min = A[i];
+            } else if (max < A[i]) {
+                max = A[i];
+            }
+        };
+        A.splice(A.indexOf(min), 1);
+        A.splice(A.indexOf(max), 1);
+        alert(A);
+    </script>
+</body>
+</html>
