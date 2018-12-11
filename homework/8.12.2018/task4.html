@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+	document.write('<table border="1" width="300px" height="300px" align="center"><tr><td align="center" class="field"></td><td align="center" class="field"></td></tr><tr><td class="field" align="center"></td><td class="field" align="center"></td></tr><tr><td class="field" align="center"></td><td class="field" align="center"></td></tr><tr><td align="center" class="field"></td><td class="field" align="center"></td></tr><tr><td class="field" align="center"></td><td class="field" align="center"></td></tr><tr><td class="field" align="center"></td><td class="field" align="center"></td></tr><tr><td align="center" class="field"></td><td class="field" align="center"></td></tr><tr><td class="field" align="center"></td><td class="field" align="center"></td></tr></table>')
+
+	let x = document.getElementsByClassName('field');
+	
+	for (i = 0; i<x.length; i++) {
+			x[i].style.backgroundColor="black";
+			x[i+1].style.backgroundColor="black";
+			i++;
+			i++;
+			i++;
+		} 
+</script>
+	
+</body>
+</html>

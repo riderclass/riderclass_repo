@@ -1,0 +1,38 @@
+<!DOCTYPE html> <html lang="en"> 
+<head> <meta charset="UTF-8">
+<title>Document</title>
+</head>
+
+ <body>
+ <style>
+button 
+{ margin: 5% 0 0 40%; display: block; width:200px; height:80px; }
+</style>
+<p>Диапазон цифр задан от 1 до 5, чтобы ускорить проверку</p>
+<button onclick="result()">Сгенерировать</button>
+<script>	
+	var result,
+		num,
+		mem = [];
+
+	function getRandomInt(min, max) { 
+		return function() {
+		num = Math.floor(Math.random() * (max - min + 1)) + min;
+		mem.push(num); 
+     	i = mem.length,
+		result1 = [];
+ 		mem.sort(function (a, b) {
+	    return a - b;
+ });
+
+ for (var i = 0; i < mem.length; i++) {
+    if (mem[i] != mem[i - 1]) {result1.push(mem[i])} else {
+    }
+}
+alert(result1);
+return console.log(mem);
+} 
+} 
+var result = getRandomInt(1, 5);
+</script>
+</body>

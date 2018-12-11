@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<style>
+	button {
+		margin: 5% 0 0 40%;
+		display: block;
+		width:200px;
+		height:80px;
+	}
+</style>
+<button onclick="infor(obj);">Показать справку №1 в консоль</button>
+<button onclick="infor(obj2);">Показать справку №2 в консоль</button>
+	<script>		
+				let obj = {
+					name: "Иван",
+					surname: "Иванов",
+					age: 18,
+					interests: ["программирование", "музыка", "аниме"],
+					education: "ИТМО"
+				};
+
+				let obj2 = {
+					name: "Петр",
+					surname: "Петров",
+					age: 21,
+					interests: ["химия", "биооружие", "эксперименты", "черный юмор"],
+					education: "ИТМО"
+				};
+				let xstr;
+				let newInt = [];
+
+				function infor(obj) {
+
+				for (let i = 0; i<obj.interests.length; i++) {
+					newInt[i] = ' ' + obj.interests[i];
+				}
+
+				if (obj.age > 17 && obj.age < 21) {
+					xstr = " лет.";
+				} else {
+					xstr = " год."
+				}
+				console.log(obj.name + " " + obj.surname + ". " + obj.age + xstr + " Интересы:" + newInt + "." + " Учится в " + obj.education);
+				};
+</script>
+</body>
+</html>
