@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<style>
+#svetofor {
+width:150px;
+height:400px;
+background: black;
+margin: 0 auto;
+}
+
+.svet {
+width:100px;
+height:100px;
+background: grey;
+margin:0 auto;
+border-radius: 50%;
+padding: 10px;
+margin-bottom:10px;
+opacity:0.3;
+}
+		
+#red {
+background: red;
+}
+
+#yellow {
+background: yellow;
+}
+
+#green {
+background: green;
+}
+
+.active {
+opacity:0.9 !important;
+}
+</style>
+
+<div id="svetofor">
+	<div id="red" class="svet"></div>
+	<div id="yellow" class="svet"></div>
+	<div id="green" class="svet"></div>
+</div>
+
+<script>
+svetofor();
+	function svetofor () {
+		var red = document.getElementById('red'),
+			yellow = document.getElementById('yellow'),
+			green = document.getElementById('green');
+
+	setTimeout(function () {
+  	    red.style.opacity=1;
+  	    yellow.style.opacity=.3;
+        green.style.opacity=.3;
+    },1000);
+
+    setTimeout(function () {
+      	red.style.opacity=.3;
+        yellow.style.opacity=1;
+        green.style.opacity=.3;
+    },3000);
+
+       setTimeout(function () {
+        red.style.opacity=.3;
+        yellow.style.opacity=.3;
+        green.style.opacity=1;
+    },5000);
+
+        setTimeout(function () {
+        red.style.opacity=.3;
+        yellow.style.opacity=1;
+        green.style.opacity=.3;
+
+    },7000);
+}
+setInterval(svetofor, 8000);
+</script>
+</body>
+</html>

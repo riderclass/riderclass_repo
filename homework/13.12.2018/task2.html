@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+<div id="itemshow"></div>
+<script>
+	var show = document.getElementById('itemshow');
+	var item = {
+		image: 'img1.jpg',
+		art: '115',
+		desc: 'Prince of Persia. 1989 год',
+		price: '1000$',
+		iShow: function() {
+			show.style.width = '200px';
+			show.style.backgroundColor = 'tomato';
+			show.style.margin = '0 auto';
+			show.style.padding = '20px';
+			show.style.textAlign = 'center';
+			show.innerHTML = '<img width="200px" src=' + this.image + ' />' + 'Артикул: ' + this.art + '<br>' + 'Описание: ' + this.desc + '<br>' + 'Цена: ' + this.price;
+  		}
+	}
+item.iShow();
+</script>
+</body>
+</html>

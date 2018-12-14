@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+<style>
+.clock {
+width: 200px;
+margin: 0 auto;
+background: tomato;
+margin-top: 10%;
+padding: 40px;
+}
+#time {
+text-align: center;
+font-size: 18px;
+color:white;
+top: 100px;
+height:18px;
+}
+</style>
+<div class="clock">
+	<div id="time"></div>
+</div>
+<script>
+function time(){
+	var time = document.getElementById("time"),
+		now = new Date(),
+		hour = now.getHours(),
+		minutes = now.getMinutes(),
+		seconds = now.getSeconds();
+	time.innerHTML ="Текущее время: " + '<span style="color:green;">' + hour + '</span>' + ":" + '<span style="color:yellow;">' + minutes+ '</span>' + ":"+ '<span style="color:red;">' + seconds + '</span>';
+}
+setInterval('time()',0);
+</script>
+</body>
+</html>
