@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+<style>	
+div {
+	width:200px;
+	height:200px;
+	background: tomato;
+	float:left;
+	margin-right:20px;
+	cursor: pointer;
+}
+.active {
+	background: green;
+}
+</style>
+
+<div></div>
+<div></div>
+
+<script>
+var x = document.getElementsByTagName('div');
+
+for (i = 0; i < x.length; i++) {
+    x[i].onclick = setColor;
+}
+
+function setColor() {
+	this.classList.toggle('active');
+};
+
+</script>
+</body>
+</html>
