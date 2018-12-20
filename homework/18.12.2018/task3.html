@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+function User(){
+this.toString = function(){
+return "Анонимный пользователь";
+}
+}
+User.openUser = function(data){
+var user = new User();
+user.firstname = data.firstname;
+user.age = data.age;
+user.toString = function(){
+return "Имя: " + this.firstname + ". Возраст: " +
+this.age + ".";
+}
+return user;
+}
+var user1 = User.openUser({firstname: 'Боб', age: 16});
+var user2 = new User();
+console.log(user1.toString());
+alert(user1.toString());
+console.log(user2.toString());
+alert(user2.toString());
+</script>
+</body>
+</html>

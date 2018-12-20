@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>		
+function Human(firstname, age, gender, interests) {
+this.firstname = firstname;
+this.age = age;
+this.gender = gender;
+this.interests = interests;
+this.toString = function() {
+	return "Человек: " + this.firstname + ". Возраст: " + this.age + " лет. Пол: " + this.gender +". Интересы: " + this.interests;
+}
+}
+function Student(firstname, age, gender, interests, education) {
+	Human.call(this, firstname, age, gender, interests);
+	this.education = education;
+	this.toString = function() {
+		return "Студент: " + this.firstname + ". Возраст: " + this.age + " лет. Пол: " + this.gender +". Интересы: " + this.interests + ". Обучается в " + this.education +".";
+}
+}
+let human1 = new Human('Боб', 19, 'м', 'безделие');
+let student1 = new Student('Джон', 18, 'м', 'фастфуд', 'ИТМО');
+console.log(human1.toString());
+console.log(student1.toString());
+alert(human1.toString());
+alert(student1.toString());
+</script>
+</body>
+</html>
