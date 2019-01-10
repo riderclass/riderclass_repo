@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>User Page</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="../css/chartist.min.css">
+</head>
+
+
+<body>
+
+<div id="maincontainer">
+<div id="content-course">
+<h1 style="padding-bottom: 10px">Мой профиль</h1>
+
+
+
+<script id="user1" type="text/x-jquery-tmpl">
+	<div id="task1-start">
+		<div style="background-image: url(${img})" id="userimg"></div>
+<div id="namebox">${name}</div>
+	<p>Ваши результаты:</p>
+	<p>Этап 1: ${task1[0]}</p>
+	<p>Этап 2: ${task1[1]}</p>
+	<p>Этап 3: ${task1[2]}</p>
+	</div>
+	<div class="ct-chart ct-major-third"></div>
+	<div id="photobox" style="padding:15px;">
+	<h1>Фотография работы</h1>
+		<img width="100%" src="${photobox}"></div>
+	<style>
+	#task1-start {
+	    min-height: auto !important;
+}
+	</style>
+</script>
+
+
+
+<div id="userbox"></div>
+
+
+
+
+<footer>
+	<a href="../pages/courses.html"><div class="task" style="justify-content: center;"><p>Назад</p></div></a>
+<a href="../index.html"><div id="exit"><p>Выйти</p></div></a>
+</footer>
+
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../js/audio.js"></script>
+<script src="../js/jquery.tmpl.min.js"></script>
+<script src="../js/userscript.js"></script>
+ <script src="../js/chartist.min.js"></script>
+
+
+
+</script>
+ 
+</body>
+
+
+
+</html>
