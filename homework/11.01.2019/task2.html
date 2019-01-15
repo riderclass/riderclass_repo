@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+function return_object(f, ...args) {
+return function() {
+var newObj = {};
+let x = f();
+for (var i = 0; i < args.length; i++) {
+newObj[args[i]] = x[i];
+}
+return newObj;
+}
+}
+let func_decoreted = function func(){
+	return [1, 2]
+}
+// Пример использования №1
+func_decoreted = return_object(func_decoreted, 'one', 'two');
+let j = func_decoreted();
+console.log(j.one); // 1
+console.log(j.two); //2
+
+// Пример использования №2
+let func_decoreted2 = function func2(){
+	return ['Python', 'is', 'programming language']
+}
+let r = func_decoreted2();
+r = return_object (func_decoreted2, 'a', 'b', 'c')();
+console.log(r.c) // 'programming language'
+</script>
+</body>
+</html>
+

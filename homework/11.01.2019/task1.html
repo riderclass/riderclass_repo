@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<h1>Ожидайте две секунды</h1>
+<script>
+
+function pause(f, timer) {
+  return function() {
+  setTimeout(f, timer); 
+  }
+}
+
+let paused = function func() {
+console.log('Функция выполниться с задержкой в 2 секунды!');
+alert('Функция выполниться с задержкой в 2 секунды!');
+}
+
+paused = pause(paused, 2000);
+paused();
+
+</script>
+</body>
+</html>
+
