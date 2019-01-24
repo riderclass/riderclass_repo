@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+let result = [];
+function reversePrint(obj) {
+    getProp(obj);
+
+    function getProp(o) {
+        for(var prop in o) {
+            if(typeof(o[prop]) === 'object') {
+                getProp(o[prop]);
+            } else {
+                result.push(o[prop]);
+            }
+        }
+        result.reverse();
+    }
+     console.log(result);
+}
+
+var someList = {
+    value: 1,
+    next: {
+        value: 2,
+        next: {
+            value: 3,
+            next: {
+                value: 4,
+                next: null
+            }
+        }
+    }
+};
+
+reversePrint(someList);
+	</script>
+</body>
+</html>
